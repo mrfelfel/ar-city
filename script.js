@@ -13,6 +13,8 @@ function loadPlaces(position) {
 
 window.onload = () => {
     const scene = document.querySelector('a-scene');
+    
+    alert("welcome");
 
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
