@@ -18,6 +18,8 @@ window.onload = () => {
     return navigator.geolocation.getCurrentPosition(function (position) {
 
         // than use it to load from remote APIs some places nearby
+        
+        alert(position.coords);
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
