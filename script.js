@@ -21,7 +21,7 @@ window.onload = () => {
 
         // than use it to load from remote APIs some places nearby
         
-=        loadPlaces(position.coords)
+       loadPlaces(position.coords)
             .then((places) => {
                  alert(JSON.stringify(places));
                 places.forEach((place) => {
