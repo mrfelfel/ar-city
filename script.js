@@ -31,16 +31,16 @@ window.onload = () => {
                     alert(JSON.stringify(place));
 
                     // add place name
-                    const placeText = document.createElement('a-link');
-                    placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    placeText.setAttribute('title', place.title);
-                    placeText.setAttribute('scale', '5 5 5');
-                    
-                    placeText.addEventListener('loaded', () => {
+                    const placeImage = document.createElement('a-image');
+                    placeImage.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    placeImage.setAttribute('scale', '1 1 1');
+                    placeImage.setAttribute('look-at', '[gps-camera]');
+                    placeImage.setAttribute('src', 'assets/asset.png');
+                    placeImage.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
-                    scene.appendChild(placeText);
+                    scene.appendChild(placeImage);
                 });
             })
     },
