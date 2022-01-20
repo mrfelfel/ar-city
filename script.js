@@ -14,7 +14,6 @@ function loadPlaces(position) {
 window.onload = () => {
     const scene = document.querySelector('a-scene');
     
-    alert("welcome");
 
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
@@ -23,12 +22,10 @@ window.onload = () => {
         
        loadPlaces(position.coords)
             .then((places) => {
-                 alert(JSON.stringify(places));
                 places.forEach((place) => {
                     const latitude = place.loc.coordinates[1];
                     const longitude = place.loc.coordinates[0];
                     
-                    alert(JSON.stringify(place));
 
                     // add place name
                     const placeImage = document.createElement('a-image');
