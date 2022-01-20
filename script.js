@@ -33,7 +33,7 @@ window.onload = () => {
                     // add place name
                     const placeImage = document.createElement('a-image');
                     placeImage.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    placeImage.setAttribute('scale', '1 1 1');
+                    placeImage.setAttribute('scale', '5 5 5');
                     placeImage.setAttribute('look-at', '[gps-camera]');
                     placeImage.setAttribute('src', 'assets/asset.png');
                     placeImage.addEventListener('loaded', () => {
