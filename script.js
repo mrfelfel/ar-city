@@ -28,6 +28,8 @@ window.onload = () => {
                 places.forEach((place) => {
                     const latitude = place.loc.coordinates[1];
                     const longitude = place.loc.coordinates[0];
+                    
+                    alert(place.loc);
 
                     // add place name
                     const placeText = document.createElement('a-link');
