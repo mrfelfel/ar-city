@@ -31,7 +31,7 @@ window.onload = () => {
                     alert(JSON.stringify(place));
 
                     // add place name
-                    const placeText = document.createElement('a-text');
+                    const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.title);
                     placeText.setAttribute('scale', '5 5 5');
