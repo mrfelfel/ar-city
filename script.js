@@ -32,7 +32,7 @@ window.onload = () => {
                     placeImage.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeImage.setAttribute('scale', '1 1 1');
                     placeImage.setAttribute('look-at', '[gps-camera]');
-                    placeImage.setAttribute('src', 'assets/asset.png');
+                    placeImage.setAttribute('src', 'assets/184977.png');
                     placeImage.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
