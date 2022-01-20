@@ -21,15 +21,14 @@ window.onload = () => {
 
         // than use it to load from remote APIs some places nearby
         
-        console.log(position.coords);
-        loadPlaces(position.coords)
+=        loadPlaces(position.coords)
             .then((places) => {
-                 alert(places);
+                 alert(JSON.stringify(places));
                 places.forEach((place) => {
                     const latitude = place.loc.coordinates[1];
                     const longitude = place.loc.coordinates[0];
                     
-                    alert(place.loc);
+                    alert(JSON.stringify(place));
 
                     // add place name
                     const placeText = document.createElement('a-link');
